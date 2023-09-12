@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">Amount</td>
+                <td style="text-align: center;">From Currency</td>
+                <td style="text-align: center;">To Currency</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="Amount"></td>
+                <td>
+                    <select id="From">
+                        <option value="VND">Viet Nam</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="To">
+                        <option value="VND">Viet Nam</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <button onclick="CM()">Convert</button>
+                </td>
+            </tr>
+        </tbody>
+    </table><br>
+    <p id="ketqua"></p>
+    <script>
+        function CM() {
+            let Amount = parseFloat(document.getElementById('Amount').value);
+            let FromC = document.getElementById('From').value;
+            let ToC = document.getElementById('To').value;
+            let Result;
+
+            if (FromC == "VND" && ToC == "USD") {
+                Result = 'Result: ' + Amount / 23000 + '$';
+            }
+            else if (FromC == "USD" && ToC == "VND") {
+                Result = 'Result: ' + Amount * 23000 + 'Đ';
+            }
+            else if (FromC == "VND" && ToC == "VND") {
+                Result = 'Result: ' + Amount + 'Đ';
+            }
+            else {
+                Result = 'Result: ' + Amount + '$';
+            }
+            
+            document.getElementById("ketqua").innerHTML = Result;
+        }
+    </script>
+</body>
+
+</html>
