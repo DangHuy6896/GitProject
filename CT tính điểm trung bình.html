@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="score"></div>
+    <div id="Total"></div>
+    <script>
+        let Ly = Number.parseFloat(prompt("Nhập điểm Vật lý"));
+        let Hoa = Number.parseFloat(prompt("Nhập điểm Hóa học"));
+        let Sinh = Number.parseFloat(prompt("Nhập điểm Sinh học"));
+        let sc = (Ly + Hoa + Sinh) / 3
+        let tt = Ly + Hoa + Sinh
+        document.getElementById('score').innerHTML = 'Điểm trung bình:' + sc
+        document.getElementById('Total').innerHTML = 'Tổng điểm:' + tt
+    </script>
+</body>
+
+</html>

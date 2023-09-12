@@ -19,3 +19,8 @@ Các tác phẩm của Matt Haig do Nhã Nam phát hành:
 - Làm sao dừng lại thời gian (2022)
 
 - Lý do tiếp tục sống (2023)
+
+
+ Có 2 cách nhập số
+        // Number.parseFloat(prompt("Nhập điểm Toán"))
+        // parseFloat(prompt("Nhập điểm Toán"))
