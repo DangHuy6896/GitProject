@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <table>
+        <tr>
+            <td colspan="2"><input type="text" name="" id="input1"></td>
+            <td colspan="2"><input type="text" name="" id="input2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="calAdd()">Addition(+)</button></td>
+            <td><button onclick="calSub()">Subtraction(-)</button></td>
+            <td><button onclick="calMul()">Multiplication(X)</button></td>
+            <td><button onclick="calDiv()">Division(/)</button></td>
+        </tr>
+    </table>
+    <p id="Result"></p>
+    <script>
+        function calAdd() {
+        let A = parseFloat(document.getElementById('input1').value);
+        let B = parseFloat(document.getElementById('input2').value);
+        let Result = A + B;
+        document.getElementById('Result').innerHTML = 'Result Addition: ' + Result;
+        }
+        function calSub() {
+        let A = parseFloat(document.getElementById('input1').value);
+        let B = parseFloat(document.getElementById('input2').value);
+        let Result = A - B;
+        document.getElementById('Result').innerHTML = 'Result Subtraction: ' + Result;
+        }
+        function calMul() {
+        let A = parseFloat(document.getElementById('input1').value);
+        let B = parseFloat(document.getElementById('input2').value);
+        let Result = A * B;
+        document.getElementById('Result').innerHTML = 'Result Multiplication: ' + Result;
+        }
+        function calDiv() {
+        let A = parseFloat(document.getElementById('input1').value);
+        let B = parseFloat(document.getElementById('input2').value);
+        let Result = A / B;
+        document.getElementById('Result').innerHTML = 'Result Division: ' + Result;
+        }
+    </script>
+</body>
+</html>
